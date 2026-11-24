@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #f4f7fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 16px;
+    background: #ffdb70;
+    color: #102a3c;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+header, footer {
+    background-color: #1b3b52;
+    color: #ffffff;
+}
+
+.header-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.portal-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #2b5876;
+}
+
+nav a[aria-current="page"] {
+    background-color: #102636;
+    border-bottom: 3px solid #ffdb70;
+}
+
+a:focus-visible {
+    outline: 3px solid #ffdb70;
+    outline-offset: 2px;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 28px 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+    margin-top: 0;
+    color: #1b3b52;
+    font-size: 1.85rem;
+}
+
+h2 {
+    color: #214d68;
+    font-size: 1.3rem;
+    margin-top: 24px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 6px;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    nav a {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .card {
+        padding: 20px;
+    }
+}

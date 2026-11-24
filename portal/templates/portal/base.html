@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}CCS Student Portal{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'portal/css/style.css' %}">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <img src="{% static 'portal/images/logo.png' %}" 
+                     alt="College of Computing Studies Department Logo" 
+                     width="64" height="64">
+                <span class="portal-title">CCS Student Portal</span>
+            </div>
+            {% include 'portal/partials/navbar.html' %}
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CCS Student Portal | Python Programming 2</p>
+    </footer>
+</body>
+</html>

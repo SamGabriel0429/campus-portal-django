@@ -1,0 +1,31 @@
+{% extends 'portal/base.html' %}
+
+{% block title %}About | CCS Student Portal{% endblock %}
+
+{% block content %}
+<section class="card">
+    <h1>About the CCS Student Portal</h1>
+    
+    <h2>Layunin ng Portal (Portal Purpose)</h2>
+    <p>
+        Ginawa ang CCS Student Portal upang mapabilis at mapadali ang pagkuha ng mahahalagang 
+        impormasyon ng mga mag-aaral mula sa kanilang departamento sa iisang website.
+    </p>
+
+    <h2>Mga Gagamit (Intended Users)</h2>
+    <p>
+        Ang sistemang ito ay idinisenyo para sa mga <strong>mag-aaral ng Computing Studies</strong>, 
+        <strong>mga guro (faculty members)</strong>, at <strong>academic advisors</strong>.
+    </p>
+
+    <h2>Mga Accessibility Feature</h2>
+    <p>
+        Upang masigurong madaling gamitin ang portal para sa lahat, ipinatupad namin ang mga sumusunod:
+    </p>
+    <ul>
+        <li><strong>Malinaw na Color Contrast:</strong> Ang dark navy na header (<code>#1b3b52</code>) at puting teksto ay madaling basahin at hindi masakit sa mata.</li>
+        <li><strong>Keyboard-Friendly Navigation:</strong> May "Skip to main content" link at malinaw na dilaw na outline (<code>:focus-visible</code>) kapag pinipindot ang <code>Tab</code> key.</li>
+        <li><strong>Descriptive Image Alt Text:</strong> May malinaw na <code>alt</code> description ang logo para sa mga gumagamit ng screen reader.</li>
+    </ul>
+</section>
+{% endblock %}
